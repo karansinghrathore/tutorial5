@@ -56,12 +56,9 @@ For deployment, it was deployed on netlify. Same steps were followed as they wer
 
 ## Built With
 
-<!--- Provide a list of the frameworks used to build this application, your list should include the name of the framework used, the url where the framework is available for download and what the framework was used for, see the example below --->
+[React] (https://reactjs.org/) - The web framework.
+[Bootstrap] (https://react-bootstrap.github.io/) - npm package for adding bootsrap library for reactjs
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-**
 
 ## Sources Used
 
