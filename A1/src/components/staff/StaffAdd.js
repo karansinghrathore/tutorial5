@@ -6,18 +6,14 @@ function StaffAdd(props) {
     const [staffDetails, setStaffDetails] = useState({});
     const [ errors, setErrors ] = useState({});
 
-    const setDetails = (field, val)=>{
+     const setDetails = (field, val)=>{
 
-        setStaffDetails({
-            ...staffDetails, [field]:val
-        })
-        
-        if(!!errors[field])
-        {
-            setErrors({...errors, [field]:null});
+            const newDetails = {
+                ...staffDetails, [field]:val
+            };
+
+            setStaffDetails({newDetails});
         }
-
-    }
 
     const validateStaffDetails = () => {
 
