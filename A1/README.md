@@ -4,10 +4,10 @@
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
-Date Created*: 05 FEB 2023
-Last Modification Date*: 06 FEB 2023
-Hosted URL*: https://resplendent-pony-4ee387.netlify.app/
-Git URL*: https://git.cs.dal.ca/krathore/csci5709/-/tree/assignment1
+* *Date Created*: 05 FEB 2023
+* *Last Modification Date*: 06 FEB 2023
+* *Hosted URL*: https://resplendent-pony-4ee387.netlify.app/
+* *Git URL*: https://git.cs.dal.ca/krathore/csci5709/-/tree/assignment1
 
 ## Authors
 
