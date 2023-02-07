@@ -239,3 +239,104 @@ The code above was created by adapting the code in [Boostrap React offical docum
 - <!---How---> The code in [Boostrap React offical documentation](https://react-bootstrap.netlify.app/forms/input-group/  was implemented by official contributors to react bootstrap component library.
 - <!---Why---> [Boostrap React offical documentation](https://react-bootstrap.netlify.app/forms/input-group/'s Code was used I wanted to put the tag of the filter just aside to the search text bar and same for the category filter as well. 
 - <!---How---> Boostrap React offical documentation](https://react-bootstrap.netlify.app/forms/input-group/'s Code was modified by me to change this to select type of filter as well as input text filter horizontally to each other, with labels as well beside them in the same row.
+
+### StaffAdd.js
+
+*Lines 69 - 156*
+
+
+```
+            <Form onSubmit={onCreateStaffSubmit}>
+                
+                {/* for name    */}
+                <Row className="mb-3">
+                    <Form.Group as={Col} >
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control  type="text" placeholder="Enter staff member's name" 
+                        isInvalid={ !!errors.name } onChange={ e => setDetails('name', e.target.value) }/>
+                        <Form.Control.Feedback type="invalid">{errors.name}</Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+
+                {/* staff type */}
+                <Row className="mb-3">
+                    <Form.Group as={Col} md="8">
+                        <Form.Label>Type</Form.Label>
+                        <Form.Control  as="select" type="select" size="sm"
+                        isInvalid={ !!errors.type } onChange={ e => setDetails('type', e.target.value) }>
+                            <option value="">Please select staff type</option>
+                            <option value="Chef">Chef</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Waiter">Waiter</option>
+                            <option value="Other">Other</option>
+                        </Form.Control>
+                        <Form.Control.Feedback type="invalid">{errors.type}</Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+
+                {/* contact number of staff */}
+                <Row className="mb-3">
+                     <Form.Group as={Col} md="8">
+                        <Form.Label>Contact number</Form.Label>
+                        <Form.Control type="text"  maxLength={10} placeholder="Enter staff member's contact number"
+                            isInvalid={ !!errors.contact } onChange={ e => setDetails('contact', e.target.value) }
+                        />
+                        <Form.Control.Feedback type="invalid">{errors.contact}</Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+
+                {/* emergency contact number for staff */}
+                <Row className="mb-3">
+                     <Form.Group as={Col} md="8">
+                        <Form.Label>Emergency Contact number</Form.Label>
+                        <Form.Control type="text"  maxLength={10} placeholder="Enter emergency contact number"
+                            isInvalid={ !!errors.emergencyContact } onChange={ e => setDetails('emergencyContact', e.target.value) }
+                        />
+                        <Form.Control.Feedback type="invalid">{errors.emergencyContact}</Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+
+                {/* blood group */}
+                <Row className="mb-3">
+                    <Form.Group as={Col} md="8">
+                        <Form.Label>Blood Group</Form.Label>
+                        <Form.Control  as="select" type="select" size="sm" 
+                        isInvalid={ !!errors.bloodGroup } onChange={ e => setDetails('bloodGroup', e.target.value) }>
+                            <option value="">Please select blood group</option>
+                            <option value="A-">A-</option>
+                            <option value="A+">A+</option>
+                            <option value="B-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="O-">O-</option>
+                            <option value="O+">O+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="Not available">Not available</option>
+                        </Form.Control>
+                        <Form.Control.Feedback type="invalid">{errors.bloodGroup}</Form.Control.Feedback>
+                    </Form.Group>
+                </Row>
+
+
+```
+
+The code above was created by adapting the code in [Alec Grey] (https://dev.to/alecgrey/controlled-forms-with-front-and-backend-validations-using-react-bootstrap-5a2/ ) as shown below: 
+
+```
+<Form.Group>
+    <Form.Label>Name</Form.Label>
+    <Form.Control 
+        type='text' 
+        onChange={ e => setField('name', e.target.value) }
+        isInvalid={ !!errors.name }
+    />
+    <Form.Control.Feedback type='invalid'>
+        { errors.name }
+    </Form.Control.Feedback>
+</Form.Group>
+```
+
+- <!---How---> The code in [Alec Grey] (https://dev.to/alecgrey/controlled-forms-with-front-and-backend-validations-using-react-bootstrap-5a2/ ) was implemented by Alec Grey
+- <!---Why---> [Alec Grey] (https://dev.to/alecgrey/controlled-forms-with-front-and-backend-validations-using-react-bootstrap-5a2/ )'s Code was used because I just wanted to know how to keep validation checks on individual form fields. 
+- <!---How---> [Alec Grey] (https://dev.to/alecgrey/controlled-forms-with-front-and-backend-validations-using-react-bootstrap-5a2/ )'s Code was modified by me, I used the tag of isInvalid in my all form fields and customized validatation for rest of the form fields like select and text form. The approach used was similar to what I had developed, I was just missing how to put invalid check on individual form. So it made sense to use it as well. I also had created a custom function which will do custom validations on all the form fields. 
+
