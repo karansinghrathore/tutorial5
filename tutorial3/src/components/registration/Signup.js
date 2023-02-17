@@ -15,7 +15,7 @@ function Signup() {
     const register =(e) =>{
         e.preventDefault();
         validateDetails();
-        if(Object.keys(errors).length > 0)
+        if(Object.keys(errors).length === 0)
         {
             navigate('/profile', { state: { user: userDetails} });
         }
