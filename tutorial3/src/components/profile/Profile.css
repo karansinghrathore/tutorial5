@@ -1,0 +1,9 @@
+.profileDetailsColumn{
+    margin-top: 100px;
+    background: #e6e2d3;
+    border: 1px solid #000;
+}
+
+.profileDetailsLabel{
+    text-align: center;
+}
