@@ -15,10 +15,6 @@ function Signup() {
     const register =(e) =>{
         e.preventDefault();
         validateDetails();
-        if(Object.keys(errors).length === 0)
-        {
-            navigate('/profile', { state: { user: userDetails} });
-        }
     }
 
     const validateDetails = ()=>{
@@ -55,7 +51,10 @@ function Signup() {
         {
             err.confirmPassword = "Doesn't match with password";
         }
-        
+        if(Object.keys(err).length === 0)
+        {
+            navigate('/profile', { state: { user: userDetails} });
+        }
         // setting the errors
         setErrors(err);
     }
