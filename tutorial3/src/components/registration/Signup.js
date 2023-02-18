@@ -34,7 +34,7 @@ function Signup() {
         }
 
         // validating email
-        if(!userDetails.email || !userDetails.email.match("[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,4}$"))
+        if(!userDetails.email || !userDetails.email.match("[A-Za-z0-9_.!#$%^&*+]+@[A-Za-z]+\.[A-Za-z]{2,4}$"))
         {
             err.email = "Please provide a valid email.";
         }
